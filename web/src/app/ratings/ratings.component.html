@@ -1,0 +1,25 @@
+<div class="container">
+    <mat-card class="item-card">
+        <mat-card-title>Would you {{getItemVerb()}} this?</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content class="row">
+            <div class="column left">
+                <img [src]="currentItem?.thumbnail">
+            </div>
+            <div class="column">
+                <h1 class="title">{{currentItem?.title}}</h1>
+                <h3 class="author" *ngIf="currentItem?.author">{{currentItem?.author}}</h3>
+                <div class="type">
+                    <mat-icon>{{getItemIcon()}}</mat-icon> <span style="padding-top: 2px;">{{currentItem?.type}}</span>
+                </div>
+                <div class="description-container">
+                    <span class="text">{{currentItem?.description}}</span>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="accent" class="vote-button"><mat-icon class="check-icon">check</mat-icon>No</button>
+            <button mat-flat-button color="primary" class="vote-button"><mat-icon class="check-icon">check</mat-icon>Yes</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    background-color: #ebebeb;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.item-card {
+    width: 40%;
+    min-height: 58%;
+    height: 58%;
+    margin: 5% 5%;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.column {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    &.left {
+        align-items: center;
+    }
+}
+
+img {
+    height: 360px;
+    width: 240px;
+    margin: auto; 
+}
+
+.description-container {
+    height: 200px;
+    max-height: 200px;
+    overflow-y: hidden;
+    padding-right: 10px;
+    &:hover {
+        overflow-y: auto;
+    }
+    &::-webkit-scrollbar {
+        width: 0.4em;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #999;
+    }
+    &::-webkit-scrollbar-track {
+        background: #ddd;
+    }
+}
+.text {
+    font-size: 10pt;
+}
+
+.title {
+    font-weight: 550;
+}
+
+.type {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    color: #3f51b5;
+    margin-bottom: 10px;
+}
+
+mat-card-title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.vote-button {
+    width: 100px;
+}
+
+.check-icon {
+    margin-right: 10px;
+}
+
