@@ -18,8 +18,8 @@
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-flat-button color="accent" class="vote-button"><mat-icon class="check-icon">check</mat-icon>No</button>
-            <button mat-flat-button color="primary" class="vote-button"><mat-icon class="check-icon">check</mat-icon>Yes</button>
+            <button mat-flat-button color="accent" class="vote-button" (click)="rateItem(false)"><mat-icon class="check-icon">check</mat-icon>No</button>
+            <button mat-flat-button color="primary" class="vote-button" (click)="rateItem(true)"><mat-icon class="check-icon">check</mat-icon>Yes</button>
         </mat-card-actions>
     </mat-card>
 </div>

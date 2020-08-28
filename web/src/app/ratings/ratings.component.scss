@@ -9,9 +9,10 @@
 
 .item-card {
     width: 40%;
-    min-height: 58%;
-    height: 58%;
-    margin: 5% 5%;
+    min-height: 60%;
+    height: 60%;
+    max-height: 80%;
+    margin: 3% 5%;
 }
 
 .row {
@@ -19,6 +20,7 @@
     flex-flow: row nowrap;
     align-items: center;
     width: 100%;
+    max-height: 75%;
     padding: 20px 0;
 }
 
@@ -26,7 +28,7 @@
     display: flex;
     flex-flow: column nowrap;
     width: 50%;
-    height: 100%;
+    height: 80%;
     justify-content: space-evenly;
     &.left {
         align-items: center;
@@ -34,8 +36,8 @@
 }
 
 img {
-    height: 360px;
-    width: 240px;
+    height: 80%;
+    width: 60%;
     margin: auto; 
 }
 
@@ -82,6 +84,8 @@ mat-card-title {
 mat-card-actions {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    min-height: 10%;
 }
 
 .vote-button {

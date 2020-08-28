@@ -19,7 +19,7 @@ export class RatingsComponent implements OnInit {
   async getItem() {
     this.http.get("https://api.lib.byu.edu/leaflet/item").toPromise().then((resp) => {
       this.currentItem = resp as Item;
-      console.log(this.currentItem);
+      // console.log(this.currentItem);
     }, (err) => {
       console.error(err);
     })
@@ -45,6 +45,21 @@ export class RatingsComponent implements OnInit {
           return "videocam"
       }
     }
+  }
+
+  rateItem(rating: boolean) {
+    const body = new RatingRequest();
+    body.itemId = this.currentItem.id;
+    body.rating = rating;
+    
+    this.http.post("https://api.lib.byu.edu/leaflet/users/jpw547/ratings", body, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).toPromise().then((resp) => {
+      // console.log(resp);
+      this.getItem();
+    });
   }
 }
 
