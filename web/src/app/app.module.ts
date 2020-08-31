@@ -13,13 +13,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { RatingsComponent } from './ratings/ratings.component';
-import { PhaseTenComponent } from './phase-ten/phase-ten.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RatingsComponent,
-    PhaseTenComponent
+    RatingsComponent
   ],
   imports: [
     BrowserModule,
